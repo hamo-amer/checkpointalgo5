@@ -1,0 +1,12 @@
+FUNCTION isPalindrome(word : STRING,i,n : INTEGER) : BOOLEAN
+VAR
+    result : BOOLEAN;
+BEGIN
+    IF (n=0 OR n=1) THEN
+        RETURN true;
+    ELSE_IF (word[i]<>word[n-1]) THEN
+        RETURN false;
+    ELSE
+        RETURN isPalindrome(word,i+1,n-1);
+    END_IF
+END
